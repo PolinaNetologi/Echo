@@ -1,6 +1,6 @@
 package ru.netology.rest;
 
-import....
+import ....
 
 public class PostmanEchoTest {
     @Test
