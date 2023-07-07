@@ -1,7 +1,7 @@
 package ru.netology.rest;
 
 import org.junit.jupiter.api.Test;
-import static org.hamcrest.Matcher.equalTo;
+import static org.hamcrest.Matchers.equalTo;
 import static io.restassured.RestAssured.given;
 
 class PostmanEchoTest {
