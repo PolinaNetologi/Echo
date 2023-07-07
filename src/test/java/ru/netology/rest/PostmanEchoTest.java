@@ -1,17 +1,23 @@
 package ru.netology.rest;
 
-import ....
+import org.junit.jupiter.api.Test;
 
-public class PostmanEchoTest {
+import static org.hamcrest.Matchers.equalTo;
+import static io.restassured.RestAssured.given;
+
+class PostmanEchoTest {
+
     @Test
-    void  shouldSendData() {
+    void shouldReturnSendData() {
         given()
-                .baseUri("https://postman-echo.com")
+                .baseUri("http://postman-echo.com")
                 .body("H1")
                 .when()
-                .post( "/post")
+                .post("/post")
                 .then()
-                .statucCode( 200)
-                .body("data", equalTo)( "H1"));
+                .statusCode(200)
+                .body( "data", equaTo("H1"));
+        ;
     }
 }
+
